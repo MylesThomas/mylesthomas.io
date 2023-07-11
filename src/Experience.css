@@ -1,0 +1,96 @@
+.experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.work-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;  /* */
+    align-items: flex-start;
+}
+
+.points {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.item-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo {
+    width: 60px;
+    margin-right: 20px;  /* Separation from text */
+}
+
+.text-muted {
+    color: grey;
+}
+
+.header {
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+.logo:hover {
+    animation-name: spin;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    } 
+}
+
+/* Adding styling for the hyperlinks */
+/* unvisited link */
+.links {
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* Copied and pasted from above for .points */
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+  }
+  
+  a:link {
+    color: black;
+  }
+  
+  a:visited {
+    color: black;
+  }
+  
+  a:focus,
+  a:hover {
+    border-bottom: 1px solid;
+  }
+  
+  a:active {
+    color: red;
+  }
+  
+  /* a[href^="http"] {
+    background: url("external-link-52.png") no-repeat 100% 0;
+    background-size: 16px 16px;
+    padding-right: 19px;
+  } */
+  
