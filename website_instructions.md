@@ -692,6 +692,9 @@ Go into the app's code on your local computer. (In VSCode)
             - current
             - past
 
+- Check that your changes look right
+    - npm start
+
 - Rebuild the project
     - npm run build
         - updated versions of build assets are now in the 'build' folder
@@ -705,11 +708,13 @@ Note: If you go to your website you will not see the update yet
     - We won't see the update for 24 hours, unless...
 
 - Tell Cloudfront to invalidate its caches and update
-    - Cloudfront > Click on your distribution > Invalidations > Create invalidation
+    - Cloudfront (https://aws.amazon.com/cloudfront/) > Click on your distribution > Invalidations > Create invalidation
         - Add object paths: /*
             - This does it for all files
 
 Once this is done (ie. Status is done in Cloudfront) your website will be updated!
+
+
 
 But let's be honest, doing all of that by hand could get pretty annoying...
 
@@ -754,3 +759,44 @@ Next, set up the Command Line Interface.
     - yarn sync
     
     - yarn invalidate
+
+
+### Updating my Website to have better styling by leveraging CSS frameworks
+
+``` css
+
+```
+
+### Updating the Title and Icon in Google Chrome
+
+Title
+- Head to public/index.html
+- Line 27: Change 'React App' to 'mylesthomas.io' 
+
+Logo
+- Replace the favicon.ico with your own
+    - https://favicon.io/favicon-converter/ > Upload your photo > Download
+    - Unzip the .zip folder > Drag into public folder > Replace
+        - I used this white logo from google drive: [Link to photo](https://drive.google.com/file/d/1kiEhdojVZ-IamD7GiUQluAS-AWBrfcHh/view?usp=sharing)
+
+Check that your changes look right
+- npm start
+
+Note: If favicon/logo is not showing up, try another browser. This can be a cache related 'issue'
+
+Rebuild the project
+- npm run build
+    - updated versions of build assets are now in the 'build' folder
+
+Update the files in your S3 bucket
+- S3 (https://aws.amazon.com/s3/) > Click on your S3 Bucket > Upload > 
+    - This will overwrite the current files in S3
+
+Tell Cloudfront to invalidate its caches and update
+- Cloudfront (https://aws.amazon.com/cloudfront/) > Click on your distribution > Invalidations > Create invalidation
+    - Add object paths: /*
+        - This does it for all files
+
+Once this is done (ie. Status is done in Cloudfront) your website will be updated!
+
+Try it out: [mylesthomas.io](https:/.mylesthomas.io/)

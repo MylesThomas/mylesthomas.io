@@ -22,7 +22,7 @@ const Profile = () => {
                     <span className="big-text"> Myles Thomas</span>
                 </p>
                 <p className="no-margin small-text">
-                    management consultant<span className="highlight-text"></span>, statistician, music producer
+                    McKinsey consultant<span className="highlight-text"></span>, statistician, music producer
                 </p>
                 <div className="icons">
                     <a href="https://twitter.com/wisconsinstats" target="_blank" rel="noreferrer">

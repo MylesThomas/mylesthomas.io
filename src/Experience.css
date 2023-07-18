@@ -1,7 +1,36 @@
+/* div {
+    display: flex;
+    width: 80%;
+    height: 50vh;
+    border: 1px solid black;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  } */
+  
+.body {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
 .experience {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    /* padding: 0px 0px 0px 250px; */
+    /* top, right, bottom, left */
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 .work-items {
@@ -32,13 +61,32 @@
     margin-right: 20px;  /* Separation from text */
 }
 
+.left-wrap {
+    color: black;
+    text-align: left;
+}
+
 .text-muted {
     color: grey;
 }
 
+/* .no-margin {
+    color: black;
+    display: flex;
+    align-items: flex-start;
+} */
+
+
+
 .header {
+    display: flex;
     text-decoration: underline;
     text-decoration-color: black;
+
+    justify-content: center;
+    align-items: center;
+    /* color: green; */
+    text-align: center;
 }
 
 .logo:hover {
@@ -69,28 +117,31 @@ a {
     outline: none;
     text-decoration: none;
     padding: 2px 1px 0;
-  }
-  
-  a:link {
-    color: black;
-  }
-  
-  a:visited {
-    color: black;
-  }
-  
-  a:focus,
-  a:hover {
-    border-bottom: 1px solid;
-  }
-  
-  a:active {
-    color: red;
-  }
+}
+
+a:link {
+color: black;
+}
+
+a:visited {
+color: black;
+}
+
+a:focus,
+a:hover {
+border-bottom: 1px solid;
+}
+
+a:active {
+color: orange;
+}
   
   /* a[href^="http"] {
     background: url("external-link-52.png") no-repeat 100% 0;
     background-size: 16px 16px;
     padding-right: 19px;
   } */
-  
+
+
+
+/* Media queries for a responsive layout */

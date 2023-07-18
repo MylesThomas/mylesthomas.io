@@ -7,7 +7,7 @@ import mylesThomasImage from "./figures/myles-thomas.jpg";
 // import { Link } from "react-router-dom"; // So that we can use Links in the items for ShotQuality
 
 const Experience = () => {
-    const items = [
+    const currentItems = [
         {
             title: "Senior Data Scientist",
             company: "McKinsey & Company",
@@ -29,7 +29,9 @@ const Experience = () => {
             ],
             image: mylesThomasImage
         },
+    ]
 
+    const pastItems = [
         {
             title: "Quantitative Researcher",
             company: "ShotQuality",
@@ -52,7 +54,7 @@ const Experience = () => {
                 // "Machine Learning Engineering: Model Validation",
             ],
             image: btImage
-        }
+        },
     ]
 
     // Used for links below
@@ -61,17 +63,22 @@ const Experience = () => {
     //   };
 
     return (
+        <html className="body">
+
         <div className="experience">
-            <h1 className="header">Work Experience</h1>
+
+            <h1 className="header">Current</h1>
+
+            {/* This is where the mapping for the items begins */}
             <div className="work-items">
-                {items.map((item) => (
+                {currentItems.map((item) => (
                     <div className="item" key={Math.random()}>
                         <img src={item.image} alt="logo" className="logo"/>
                         <div className="item-content">
                             <div className="item-header"> 
-                            <h2 className="no-margin">{item.title}</h2>
-                            <h4 className="no-margin">{item.company}</h4>
-                            <p className="no-margin text-muted">{item.date}</p> 
+                            <h2 className="no-margin left-wrap">{item.title}</h2>
+                            <h4 className="no-margin left-wrap">{item.company}</h4>
+                            <p className="no-margin text-muted left-wrap">{item.date}</p> 
                             </div>
 
                             {/* <p className="no-margin">{item.description}</p>
@@ -81,10 +88,10 @@ const Experience = () => {
                                 ))} 
                             </ul> */}
 
-                            <p className="no-margin">{item.description}</p>
+                            <p className="no-margin left-wrap left-wrap">{item.description}</p>
 
                             {/* Adding the points as links, for now */}
-                            <ul className="links">
+                            <ul className="links left-wrap">
                                 {item.points.map((point) => (
                                     <li key={Math.random()}>
                                         {/* <a href={point}>{point}</a> */}
@@ -110,7 +117,37 @@ const Experience = () => {
                     </div>
                 ))}
             </div>
+            {/* Mapping of items finishes with this div. */}
+
+
+            {/* New section for past work exp. */}
+            <h1 className="header">Past</h1>
+            <div className="work-items">
+                {pastItems.map((item) => (
+                <div className="item" key={Math.random()}>
+                    <img src={item.image} alt="logo" className="logo"/>
+                    <div className="item-content">
+                        <div className="item-header"> 
+                        <h2 className="no-margin left-wrap">{item.title}</h2>
+                        <h4 className="no-margin left-wrap">{item.company}</h4>
+                        <p className="no-margin text-muted left-wrap">{item.date}</p> 
+                        </div>
+                        <p className="no-margin left-wrap">{item.description}</p>
+                        <ul className="links left-wrap">
+                            {item.points.map((point) => (
+                                <li key={Math.random()}>
+                                    <a style={{display: "table-cell"}} href={point} target="_blank" rel="noreferrer">{point}</a> 
+                                </li>
+                            ))} 
+                        </ul>
+                    </div>
+                </div>
+            ))}
+            </div>
+
         </div>
+
+        </html>
     );
 };
 
