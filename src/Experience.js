@@ -9,7 +9,7 @@ import mylesThomasImage from "./figures/myles-thomas.jpg";
 const Experience = () => {
     const currentItems = [
         {
-            title: "Senior Data Scientist",
+            title: "Senior Research Scientist",
             company: "McKinsey & Company",
             date: "2022 - Current",
             description: "Working alongside the world's leading businesses, governments, and institutions.",

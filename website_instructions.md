@@ -700,7 +700,7 @@ Go into the app's code on your local computer. (In VSCode)
         - updated versions of build assets are now in the 'build' folder
 
 - Update the files in your S3 bucket
-    - S3 (https://aws.amazon.com/s3/) > Click on your S3 Bucket > Upload > 
+    - S3 (https://aws.amazon.com/s3/) > Click on your S3 Bucket > Upload > drag build folder
         - This will overwrite the current files in S3
 
 Note: If you go to your website you will not see the update yet
@@ -789,8 +789,10 @@ Rebuild the project
     - updated versions of build assets are now in the 'build' folder
 
 Update the files in your S3 bucket
-- S3 (https://aws.amazon.com/s3/) > Click on your S3 Bucket > Upload > 
+- S3 (https://aws.amazon.com/s3/) > Click on your S3 Bucket > Upload > Open build folder > Drag 7 files + 1 folder 'static'
     - This will overwrite the current files in S3
+        - To be safe, you can delete everything in the S3 bucket before uploading the build folder
+        - Make sure to upload the contents of 'build', not 'build' itself (There should be 8 objects in your S3 Bucket)
 
 Tell Cloudfront to invalidate its caches and update
 - Cloudfront (https://aws.amazon.com/cloudfront/) > Click on your distribution > Invalidations > Create invalidation
@@ -799,4 +801,4 @@ Tell Cloudfront to invalidate its caches and update
 
 Once this is done (ie. Status is done in Cloudfront) your website will be updated!
 
-Try it out: [mylesthomas.io](https:/.mylesthomas.io/)
+Try it out: [mylesthomas.io](https://mylesthomas.io/)
