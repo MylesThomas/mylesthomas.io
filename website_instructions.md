@@ -802,3 +802,9 @@ Tell Cloudfront to invalidate its caches and update
 Once this is done (ie. Status is done in Cloudfront) your website will be updated!
 
 Try it out: [mylesthomas.io](https://mylesthomas.io/)
+
+One last thing - update Github!
+- git status
+- git add .
+- git commit -m "Updated Experience.js to reflect new job title"
+- git push
