@@ -36,7 +36,7 @@ const Experience = () => {
             title: "Quantitative Researcher",
             company: "ShotQuality",
             date: "August 2021 - August 2022",
-            description: "Leveraged proprietary data to optimize the decision making of High Major NCAA D1 clients and developed profitable sports betting models.",
+            description: "Leveraged proprietary shot location data to optimize the decision making of High Major NCAA D1 clients and developed profitable sports betting models.",
             points: [
                 "https://shotquality.com",
                 "https://shotqualitybets.com",
@@ -45,10 +45,10 @@ const Experience = () => {
         },
 
         {
-            title: "Consultant",
-            company: "Baker Tilly",
+            title: "Software Engineer",
+            company: "Baker Tilly Digital",
             date: "June 2021 - August 2022",
-            description: "Developed software with machine learning applications to optimize the operational efficiency of clients in the supply chain industry.",
+            description: "Developed web applications that leverage machine learning to optimize the operational efficiency of clients in the supply chain industry.",
             points: [
                 // "Software Engineering: Full-stack Python developer",
                 // "Machine Learning Engineering: Model Validation",
@@ -67,7 +67,7 @@ const Experience = () => {
 
         <div className="experience">
 
-            <h1 className="header">Current</h1>
+            <h1 className="header">Current Ventures</h1>
 
             {/* This is where the mapping for the items begins */}
             <div className="work-items">
@@ -121,7 +121,7 @@ const Experience = () => {
 
 
             {/* New section for past work exp. */}
-            <h1 className="header">Past</h1>
+            <h1 className="header">Past Experience</h1>
             <div className="work-items">
                 {pastItems.map((item) => (
                 <div className="item" key={Math.random()}>

@@ -693,19 +693,21 @@ Go into the app's code on your local computer. (In VSCode)
             - past
 
 - Check that your changes look right
+    - cd mylesthomas.io
     - npm start
 
 - Rebuild the project
     - npm run build
         - updated versions of build assets are now in the 'build' folder
+        - If you'd like, delete the logo192.png and logo512.png files, and run `npm start` then `npm run build` before proceeding
 
 - Update the files in your S3 bucket
-    - S3 (https://aws.amazon.com/s3/) > Click on your S3 Bucket > Upload > drag build folder
-        - This will overwrite the current files in S3
+    - S3 (https://aws.amazon.com/s3/) > Click on your S3 Bucket > Upload > drag contents of the build folder
+        - This will overwrite the current files in S3 (if you did not 'permanently delete' them already)
 
 Note: If you go to your website you will not see the update yet
 - This is because Cloudfront does a lot of caching
-    - We won't see the update for 24 hours, unless...
+    - We won't see the update for 24 hours, unless we do the next step...
 
 - Tell Cloudfront to invalidate its caches and update
     - Cloudfront (https://aws.amazon.com/cloudfront/) > Click on your distribution > Invalidations > Create invalidation
